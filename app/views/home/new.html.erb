@@ -1,0 +1,8 @@
+<%= form_tag homes_path do %>
+  <%= label_tag(:task, "Add a task please") %>
+  <%= text_field_tag(:task, nil, placeholder: 'add a task') %>
+
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= label_tag(:task, "Add a task") %>
+
+<% end %>

@@ -1,13 +1,12 @@
 class HomeController < ApplicationController
-  def new
-    @cats
-    @users
-    @todos
-  end
+  def show
+    @task = params[:task]
+    unless @task.nil?
+      Todo.create(:task => @task)
+    end
 
-  def create
-
-
-
+    @cats = Cat.all
+    @users = User.all
+    @todos = Todo.all
   end
 end
